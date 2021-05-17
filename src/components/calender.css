@@ -114,10 +114,14 @@
     .monthName, .yearNum{
         height: 30px;
         margin: 4px;
+        font-size: small;
 
     }
     .dayNames{
         font-size: small;
+    }
+    .months, .years{
+        margin: 5px;
     }
 
 }

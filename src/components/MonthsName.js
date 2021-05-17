@@ -1,6 +1,5 @@
 import React from 'react';
 import "./calender.css";
-import moment from "moment";
 
 const MonthsName = ({currentValue, setcurrentValue, setisMonth}) => {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -12,8 +11,8 @@ const MonthsName = ({currentValue, setcurrentValue, setisMonth}) => {
 
     return (
         <div className = "months">
-            {months.map((month) => (
-                <div 
+            {months.map((month, i) => (
+                <div key = {i}
                     className = "monthName"
                     onClick = {(e) =>setMonth(e.target)}>
                     {month}

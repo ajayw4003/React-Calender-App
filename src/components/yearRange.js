@@ -18,7 +18,7 @@ const YearRange = ({currentValue, setcurrentValue, setisYear}) => {
     return (
         <div className = "years">
                 {year.map((year) => (
-                    <div onClick = {(e) =>setYear(e.target)} className = "yearNum">
+                    <div key = {year.props.children} onClick = {(e) =>setYear(e.target)} className = "yearNum">
                         {year.props.children}
                     </div>
                 ))}
