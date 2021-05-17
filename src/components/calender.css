@@ -103,11 +103,12 @@
 
 @media screen and (max-width: 800px){
     .calender{
-        height: 60%;
+        height: 90%;
+        width: 100%;
     }
     .day div{
-        height: 35px;
-        
+        height: 60px;
+        margin-top: 10px;
     }
     .show{
         width: 60%; 
