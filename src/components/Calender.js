@@ -21,8 +21,13 @@ const Calender = () => {
         let event = prompt("Add Event");
         console.log(event);
         let div = e.target;
-        div.innerHTML = `${day.format('D')}
+        if(event != null){
+            div.innerHTML = `${day.format('D')}
                         <p>${event}<p>`
+        }else{
+            div.innerHTML = `${day.format('D')}`
+        }
+        
         setcurrentValue(day);
     }
     
