@@ -26,6 +26,7 @@ const Calender = () => {
                 <div className = "dayNames">
                     {dayName.map(day => <div key ={day}>{day}</div>)}
                 </div>
+                
                 {calender.map((week, j) => (
                 <div key ={j+100} className = "week">
                     {week.map((day, i) => (

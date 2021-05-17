@@ -66,3 +66,32 @@
 .after{
     background-color: #51c4d3;
 }
+.months, .years{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin: 10px;
+}
+.monthName, .yearNum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: khaki;
+}
+.monthName:hover, .yearNum:hover{
+    background: cadetblue;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.show{
+    position: absolute;
+    background-color: cornsilk;
+    z-index: 2;
+    width: 40%;
+
+}
+.hide{
+    display: none;
+}
