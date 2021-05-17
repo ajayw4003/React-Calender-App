@@ -10,13 +10,21 @@ const Calender = () => {
     const [calender, setCalender] = useState([]);
     
     
-    useEffect(() => {
-        
+    useEffect(() => {    
         setCalender(createCalender(currentValue));
-
     }, [currentValue])
     
     const dayName = ['Sun', 'Mon', 'Tue', 'Wes', 'Thu', 'Fri', 'Sat'];
+
+    const handleClick = (e, day) => {
+        console.log(e.target);
+        let event = prompt("Add Event");
+        console.log(event);
+        let div = e.target;
+        div.innerHTML = `${day.format('D')}
+                        <p>${event}<p>`
+        setcurrentValue(day);
+    }
     
     return (
         <div className = "calender">
@@ -26,13 +34,13 @@ const Calender = () => {
                 <div className = "dayNames">
                     {dayName.map(day => <div key ={day}>{day}</div>)}
                 </div>
-                
+
                 {calender.map((week, j) => (
                 <div key ={j+100} className = "week">
                     {week.map((day, i) => (
-                        <div key = {i} className = "day" onClick ={() => setcurrentValue(day)}>
+                        <div key = {i} className = "day" onClick ={(e) => handleClick(e, day)}>
                             <div className = {displayDay(day, currentValue)}>
-                                {day.format("D")}
+                                {day.format("D") }
                             </div>
                             
                         </div>))}

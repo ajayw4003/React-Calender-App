@@ -6,7 +6,6 @@ const MonthsName = ({currentValue, setcurrentValue, setisMonth}) => {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     
     const setMonth = (val) =>{
-        console.log(val.innerHTML);
         setcurrentValue(currentValue.clone().month(`${val.innerHTML}`));
         setisMonth(false);
     }

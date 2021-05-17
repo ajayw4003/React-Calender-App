@@ -1,12 +1,15 @@
 .calender{
     padding-top: 20px;
-    width: 40%;
-    height: 50%;
+    width: 70%;
+    height: 90%;
     background-color: #126e82;
     border-radius: 10px;
 }
 .week{
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 10px;
 }
 .day{
@@ -15,14 +18,15 @@
     width: calc(100% / 7);
 }
 .day div{
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-top: 5%;
+    height: 70px;
     margin-right: 6px;
     border: none;
     outline: none;
     border-radius: 3px;
+}
+.day div p{
+    font-size: small;
 }
 
 .header{
