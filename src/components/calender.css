@@ -24,6 +24,7 @@
     border: none;
     outline: none;
     border-radius: 3px;
+    overflow: hidden;
 }
 .day div p{
     font-size: small;
@@ -128,5 +129,8 @@
 @media screen and (max-width: 500px){
     .show{
         width: 70%; 
+    }
+    .day div p{
+        font-size: smaller;
     }
 }
